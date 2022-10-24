@@ -12,10 +12,13 @@ function getLocalStorageData(){
 }
 
 function onSubmit(e){
-    const dataLocal = getLocalStorageData();
+    // const dataLocal = getLocalStorageData();
+    const email = e.target.email.value;
+    const message = e.target.message.value
     e.preventDefault();
     e.target.reset();
-    console.log(dataLocal);
+    // console.log(dataLocal);
+    console.log({email, message});
     localStorage.removeItem(STORAGE_KEY);
   
 }
