@@ -24,6 +24,3 @@ function onInput(e){
     dataLocal[e.target.name] = e.target.value.trim();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(dataLocal));
 }
-
-
-
