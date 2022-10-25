@@ -11,6 +11,16 @@ function getLocalStorageData(){
     return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 }
 
+function fillForm() {
+    const dataLocal = getLocalStorageData();
+
+    for (let key in dataLocal) {
+        formRef.elements[key].value = dataLocal[key];
+    }
+}
+
+fillForm();
+
 function onSubmit(e){
     // const dataLocal = getLocalStorageData();
     const email = e.target.email.value;
