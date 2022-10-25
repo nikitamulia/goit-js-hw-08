@@ -14,6 +14,6 @@ const onPlay = function(data) {
 player.on('timeupdate', throttle(onPlay, 1000));
 
 player.setCurrentTime(currentTime).catch(function(error) {
-    
+    console.log(error);
 });
 
